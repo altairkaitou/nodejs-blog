@@ -221,7 +221,7 @@ img {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-size: clamp(1.13rem, cal(1.08rem + 0.22vw), 1.25rem);
+    font-size: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
     display: flex;
     flex-direction: column;
 }
@@ -233,3 +233,138 @@ img {
     display: inline-block;
 
 }
+
+.articles__ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 15px 0;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .articles__ul li a{
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .articles-list__date {
+        text-align: right;
+    }
+}
+
+.articles__ul li {
+    font-size: 24px;
+    cursor: pointer;
+    transition: filter 0.1s;
+}
+
+.articles__ul li:not(:last-child) {
+    border-bottom: 1px solid var(--gray-light);
+
+}
+.articles__ul li:hover {
+    filter: none;
+
+}
+
+.articles__ul:hover li {
+    filter: blur(3px);
+}
+
+.articles__ul:hover li:hover {
+    filter: none;
+}
+
+.pagination {
+    font-size: 1.3rem;
+    color: var(--gray);
+    text-decoration: none;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.pagination:hover {
+    color: var(--black);
+
+}
+
+.articles {
+    white-space: pre-wrap;
+}
+
+/* Footer */
+.footer {
+    margin: 4rem;
+    text-align: center;
+}
+
+
+/* Search Bar */
+.searchBar {
+    visibility: hidden;
+    transform: translateY(-100px);
+    background-color: var(--black);
+    padding: 4px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.searchBar.open {
+    transform: translateY(0);
+    transition: transform 0.1s;
+
+}
+
+.searchBar input {
+    margin: 0;
+    padding: 0;
+
+}
+
+#searchClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--gray-light);
+    padding: 15px;
+}
+
+/* DashBoard Admin */
+
+.admin-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-posts {
+    padding: 0;
+    margin: 0;
+}
+
+.admin-posts-controls form {
+    display: inline-block;
+}
+
+.admin-posts-controls .btn {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--gray-light);
+    border: 0;
+    text-decoration: none;
+    font-size: .8rem;
+    padding: 4px 8px;
+    line-height: 2;
+}
+
+.admin-posts li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+ 
