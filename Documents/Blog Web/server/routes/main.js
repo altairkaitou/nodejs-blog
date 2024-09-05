@@ -138,23 +138,19 @@ router.post('/search', async (req, res) => {
         })
 
 
-        
+        res.render("search", {
+            data,
+            locals
+        });
 
 
 
-
-        res.send(searchTerm);
 
     } catch (error) {
         console.log(error);
     }
 
 });
-
-
-
-
-
 
 
 

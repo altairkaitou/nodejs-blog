@@ -28,6 +28,7 @@ app.use(express.json());
 
 
 app.use('/', require('./server/routes/main'));
+app.use('/', require('./server/routes/admin'));
 
 
 app.listen(PORT, () => {
